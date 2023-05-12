@@ -30,6 +30,9 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2018-12-03
 
