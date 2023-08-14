@@ -42,5 +42,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8953-32
 
+# Qdcm
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/qdcm/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 # Call the proprietary setup
-$(call inherit-product, vendor/xiaomi/ysl/ysl-vendor.mk) 
+$(call inherit-product, vendor/xiaomi/ysl/ysl-vendor.mk)
