@@ -41,5 +41,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8953-32
 
+# VNDK
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v32/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v32.so
+
 # Call the proprietary setup
-$(call inherit-product, vendor/xiaomi/ysl/ysl-vendor.mk) 
+$(call inherit-product, vendor/xiaomi/ysl/ysl-vendor.mk)
