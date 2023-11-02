@@ -14,7 +14,8 @@ function blob_fixup() {
         vendor/lib/libvendor.goodix.hardware.fingerprint@1.0-service.so)
             "${PATCHELF_0_8}" --remove-needed "libprotobuf-cpp-lite.so" "${2}"
             ;;
-        vendor/lib/libvendor.goodix.hardware.fingerprint@1.0.so)
+        vendor/lib/libvendor.goodix.hardware.fingerprint@1.0.so \
+        | vendor/lib/com.fingerprints.extension@1.0.so)
             sed -i "s|libhidlbase.so|v32hidlbase.so|g" "${2}"
             ;;
     esac
